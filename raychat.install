@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Installation file for raychat module.
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function raychat_install() {
+  variable_set('raychat_visibility', 0);
+
+  // Remove tracking from all administrative pages
+  $pages = array(
+    'admin',
+    'admin/*',
+    'user/*/*',
+    'node/add*',
+    'node/*/*',
+  );
+  variable_set('raychat_pages', implode("\n", $pages));
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function raychat_uninstall() {
+  variable_del('raychat_account');
+  variable_del('raychat_visibility');
+  variable_del('raychat_pages');
+  variable_del('raychat_roles');
+}

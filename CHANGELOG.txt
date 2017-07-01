@@ -1,0 +1,3 @@
+CHANGELOG for Raychat module for Drupal 7
+Raychat 1.0 (June 29, 2017)
+ Initial 7.x release

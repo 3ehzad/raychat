@@ -1,0 +1,14 @@
+name = "raychat widget"
+description = Adds raychat javascript tracking code to all your site's pages.
+package = Statistics
+core = 7.x
+files[] = raychat.module
+files[] = raychat.admin.inc
+files[] = raychat.install
+configure = admin/config/system/raychat
+
+version = "7.x-1.0"
+core = "7.x"
+project = "raychat"
+
+
